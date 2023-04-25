@@ -1,0 +1,233 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    letter-spacing: .3rem;
+    background-color: #0a192f;
+    color: #64ffda;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+h2{
+    color: #ccd6f6;
+}
+
+p{
+    color:#8892b0 ;
+}
+
+/* card backgroud colgroup #112240 */
+
+/* Styling the header */
+/* Reset styles for the header and nav elements */
+header, nav {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the styles for the header element */
+header {
+    background-color: #333;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0a192f;
+    border-bottom: 1px solid #eee;
+    transition: transform 0.3s ease-out;
+    transform: translateY(0);
+  }
+  .navbar.hidden {
+    transform: translateY(-100%);
+  }
+
+/* Set the styles for the nav element */
+nav {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Set the styles for the logo */
+.logo img {
+    height: 60px;
+}
+
+/* Set the styles for the nav links */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    text-align: center;
+    margin: 0 10px;
+    padding: .3rem 1rem ;
+    /* background-color:  #8892b0 ; */
+    border-radius: .2rem;
+}
+.nav-links li:hover {
+    background-color: #23549dc3;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Set the styles for the burger menu */
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+/* Styling dropsown menu */
+.dropdown-menu{
+    background-color: #23549dc3;
+    position: absolute;
+    right: .3rem;
+    top: 3.5rem;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    
+    width: 80%;
+    margin-left: .3rem;
+    /* height: 0; */
+}
+.dropdown-menu li {
+    
+    padding: .5rem 0;
+}
+
+.dropdown-menu li:hover {
+    background-color:#0a192f;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Position the logo */
+    .navbar {
+        background-color: yellow;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+    }
+    /* Hide the nav links */
+    .nav-links {
+    display: none;
+    position: relative;
+    }
+/* =============when burger button clicked========== */
+.burger{
+    margin-right: 1rem;
+}
+.show{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 100%;
+    position: absolute;
+    right: 1rem;
+    top: 3.5rem;
+
+}
+/* Set the styles for the nav links */
+.nav-links li {
+    margin:.3rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+/* =================== */
+    /* Show the burger menu */
+    .burger {
+    display: block;
+    cursor: pointer;
+    }
+
+    /* Change the background color of the header */
+    header {
+    background-color: #555;
+    }
+
+    /* Center the logo */
+    .logo {
+    margin: 0 auto;
+    }
+
+    /* Make the burger menu responsive */
+    .burger div {
+    transition: all 0.3s ease;
+    }
+
+    /* Rotate the first and third lines
+    .burger .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger .line2 {
+    opacity: 0;
+    }
+
+    .burger .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    } */
+
+    /* Show the nav links when the burger menu is clicked */
+    .nav-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    z-index: 999;
+    }  
+}
+
+/* End of header */
