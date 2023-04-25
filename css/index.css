@@ -20,6 +20,39 @@ p{
     color:#8892b0 ;
 }
 
+#box-container {
+    background-color: #23549df4;
+    width: 20rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12rem;
+    right: 30rem;
+    padding: 2rem;
+    display: none;
+}
+.button {
+    text-align: center;
+    margin-top: 2rem;
+}
+.ok-button {
+    background-color: rgba(23, 23, 206, 0.826);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: none;
+    font-size: medium;
+    border-radius: 3px;
+}
+.ok-button:hover{
+    background-color: #112240;
+    transform: scale(1.2);
+}
+#box-main p {
+    color: black;
+}
 /* card backgroud colgroup #112240 */
 
 /* Styling the header */
@@ -111,7 +144,7 @@ nav {
 }
 
 .burger div {
-    width: 25px;
+    width: 30px;
     height: 3px;
     background-color: #fff;
     margin: 5px;
@@ -159,6 +192,9 @@ nav {
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
+    body {
+        background-color: greenyellow;
+    }
     /* Position the logo */
     nav {
         display: flex;
@@ -167,8 +203,8 @@ nav {
     }
     /* Hide the nav links */
     .nav-links {
-    display: none;
-    position: relative;
+        display: none;
+        position: relative;
     }
 /* =============when burger button clicked========== */
 .burger{
@@ -205,58 +241,64 @@ nav {
 /* =================== */
     /* Show the burger menu */
     .burger {
-    display: block;
-    cursor: pointer;
+        display: block;
+        cursor: pointer;
     }
 
     /* Change the background color of the header */
     header {
-    background-color: #555;
+        background-color: #555;
     }
 
 
     /* Make the burger menu responsive */
     .burger div {
-    transition: all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     /* Rotate the first and third lines */
     .close .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-5px, 6px) ;
     }
 
     .close .line2 {
-    opacity: 0;
+        opacity: 0;
     }
 
     .close .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    /* Show the nav links when the burger menu is clicked */
-    .nav-active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #333;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-    z-index: 999;
-    }  
+    /* resize the message box */
+    #box-container {
+        background-color: red;
+        width: 14rem;
+        height: auto;
+        top: 12rem;
+        right: 15rem;
+        font-size: medium;
+        line-height: 1.5rem;
+    }
 }
 
 /* End of header */
 @media screen and (max-width: 576px) {
     body {
-        background-color: blue;
-    } 
-
+        background-color: aqua;
+    }
     .dropdown-menu {
         width: 100%;
     }
+
+    /* resize the message box */
+    #box-container {
+        background-color: red;
+        width: 14rem;
+        height: auto;
+        top: 12rem;
+        right: 8rem;
+        font-size: medium;
+        line-height: 1.5rem;
+    }
+    
 }
