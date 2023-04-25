@@ -5,7 +5,7 @@ body {
     width: 100%;
     min-height: 100%;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-    letter-spacing: .3rem;
+    letter-spacing: .2rem;
     background-color: #0a192f;
     color: #64ffda;
     font-size: 20px;
@@ -31,11 +31,12 @@ header, nav {
 
 /* Set the styles for the header element */
 header {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     height: 80px;
     display: flex;
     align-items: center;
+    margin-bottom: 10rem;
 }
 .navbar {
     position: fixed;
@@ -78,7 +79,7 @@ nav {
 
 .nav-links li {
     text-align: center;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     padding: .3rem 1rem ;
     /* background-color:  #8892b0 ; */
     border-radius: .2rem;
@@ -91,6 +92,17 @@ nav {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: gray;
+    
+}
+.cv-icon {
+    margin-right: .5rem;
+}
+.cv-icon:hover {
+    color: #0a192f;
 }
 
 /* Set the styles for the burger menu */
@@ -110,14 +122,17 @@ nav {
     background-color: #23549dc3;
     position: absolute;
     right: .3rem;
-    top: 3.5rem;
-    width: 100%;
+    top: 5rem;
     text-align: center;
     list-style: none;
-    
     width: 80%;
     margin-left: .3rem;
-    /* height: 0; */
+    height: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.80s, visibility 0.75s, height 0.35s ease-in;
+    /* overflow: hidden; */
+
 }
 .dropdown-menu li {
     
@@ -133,17 +148,22 @@ nav {
     color: white;
 }
 
+.dropdown-menu li a:hover {
+    color: gray;
+}
+
+.main-container{
+    margin-top: 10rem;
+    padding: 2rem;
+}
+
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
     /* Position the logo */
-    .navbar {
-        background-color: yellow;
-    }
     nav {
         display: flex;
         align-items: center;
-        justify-content: center;
-        background-color: red;
+        justify-content: space-between;
     }
     /* Hide the nav links */
     .nav-links {
@@ -154,17 +174,14 @@ nav {
 .burger{
     margin-right: 1rem;
 }
+.logo{
+    margin-left: 2rem;
+}
 .show{
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    width: 100%;
-    position: absolute;
-    right: 1rem;
-    top: 3.5rem;
-
+    /* display: block; */
+    height: 18rem ;
+    opacity: 1;
+    visibility: visible;
 }
 /* Set the styles for the nav links */
 .nav-links li {
@@ -178,6 +195,13 @@ nav {
     text-decoration: none;
     font-size: 24px;
 }
+
+.cv-icon {
+    margin-right: .5rem;
+}
+.cv-icon:hover {
+    color: #23549dc3;
+}
 /* =================== */
     /* Show the burger menu */
     .burger {
@@ -190,28 +214,24 @@ nav {
     background-color: #555;
     }
 
-    /* Center the logo */
-    .logo {
-    margin: 0 auto;
-    }
 
     /* Make the burger menu responsive */
     .burger div {
     transition: all 0.3s ease;
     }
 
-    /* Rotate the first and third lines
-    .burger .line1 {
+    /* Rotate the first and third lines */
+    .close .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     }
 
-    .burger .line2 {
+    .close .line2 {
     opacity: 0;
     }
 
-    .burger .line3 {
+    .close .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-    } */
+    }
 
     /* Show the nav links when the burger menu is clicked */
     .nav-active {
@@ -231,3 +251,12 @@ nav {
 }
 
 /* End of header */
+@media screen and (max-width: 576px) {
+    body {
+        background-color: blue;
+    } 
+
+    .dropdown-menu {
+        width: 100%;
+    }
+}

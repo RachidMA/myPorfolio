@@ -28,7 +28,11 @@ prevScrollpos = currentScrollPos;
 //Show navbar when burger clicked
 const burgerButton = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links')
+const dropMenu = document.querySelector('.dropdown-menu')
 burgerButton.addEventListener('click', ()=>{
-    console.log('burger click')
-    navLinks.classList.toggle('show');
+   //Show drop down menu
+    dropMenu.classList.toggle('show');
+
+    // Rote the lines for the burger menu
+    burgerButton.classList.toggle('close');
 })
