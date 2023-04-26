@@ -10,11 +10,61 @@ body {
     color: #64ffda;
     font-size: 20px;
     line-height: 1.3;
+    
 }
-
+/* Aminate full name */
 h2{
     color: #ccd6f6;
 }
+.full-name {
+    /* width: 58%; */
+    /* background-color: chartreuse; */
+    width: 30vw;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.full-name span {
+    color: #64ffda ;
+}
+
+h1 {
+    position: relative;
+    color: #0a192f;
+    font-size: 3vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.1vw gray;
+    margin: 0;
+    padding: 0;
+    
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 46%;
+    width: 200%;
+    height: 100%;
+    color: #64ffda;
+    -webkit-text-stroke: 0vw gray;
+    border-right: 2px solid yellow ;
+    overflow: hidden;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate
+{
+    0% ,10%, 100%
+    {
+        width: 0;
+    }
+    70%
+    {
+        width: 50%;
+    }
+}
+
+/* end full name animation */
+
+
 
 p{
     color:#8892b0 ;
@@ -186,7 +236,7 @@ nav {
 }
 
 .main-container{
-    margin-top: 10rem;
+    margin-top: 5rem;
     padding: 2rem;
 }
 
@@ -195,6 +245,16 @@ nav {
     body {
         background-color: greenyellow;
     }
+    /* full name animation */
+    .full-name {
+        /* width: 58%; */
+        background-color: chartreuse;
+        width: 32vw;
+    }
+    h1::before{
+        left: 48%;
+    }
+    /* end full name animation */
     /* Position the logo */
     nav {
         display: flex;
@@ -286,6 +346,16 @@ nav {
     body {
         background-color: aqua;
     }
+    /* full name animation */
+    .full-name {
+        /* width: 58%; */
+        background-color: chartreuse;
+        width: 35vw;
+    }
+    h1::before{
+        left: 46%;
+    }
+    /* end full name animation */
     .dropdown-menu {
         width: 100%;
     }
