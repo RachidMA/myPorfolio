@@ -50,14 +50,13 @@ const cv_button =document.querySelector('#cv-button')
 
 //for lager screen
 cvButton.addEventListener('click', ()=>{
-    console.log('button clicked')
     boxContainer.style.display = 'block';
 })
 //for small screen
 cv_button.addEventListener('click', ()=>{
-    console.log('button clicked')
     boxContainer.style.display = 'block';
 })
+
 okButton.addEventListener('click', ()=>{
     boxContainer.style.display = 'none';
 })
