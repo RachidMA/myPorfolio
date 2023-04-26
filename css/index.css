@@ -194,7 +194,7 @@ h2{
 }
 .full-name {
     /* width: 58%; */
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     width: 30vw;
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -222,9 +222,9 @@ h1::before{
     height: 100%;
     color: #64ffda;
     -webkit-text-stroke: 0vw gray;
-    border-right: 2px solid yellow ;
+    border-right: 2px solid #64ffda ;
     overflow: hidden;
-    animation: animate 3s linear infinite;
+    animation: animate 4.5s ease-in-out infinite;
 }
 @keyframes animate
 {
@@ -246,14 +246,13 @@ h1::before{
 }
 /* Styling main container  */
 /* ABOUT ME */
-.about-me-title, .projects-title {
+.about-me-title, .projects-title, .skills-title {
     font-size: 2rem;
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
     padding: 1rem;
     text-decoration: underline;
-    /* text-align: center; */
 }
 .about-me-article {
     /* background-color: red; */
@@ -270,13 +269,14 @@ h1::before{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    /* height: 100%; */
+    width: 22%;
     background-color: yellow;
+    border-radius: 50%;
 }
 .about-me-image img {
     height: 75%;
-    width: 100%;
+    width: 80%;
+    border-radius: 50%;
 }
 /* animate about me section */
 .animate-text {
@@ -330,7 +330,7 @@ hr {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 600px;
+    height: auto;
 }
 .projects-container {
     display: flex;
@@ -341,24 +341,69 @@ hr {
 
 }
 .project {
-    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
     /* background-color: red; */
     border: 1px solid white;
-    overflow: hidden;
     margin: 1rem;
-    box-shadow: 5px 5px 10px lightblue;
+    box-shadow: 3px 3px 10px lightblue;
     border-radius: 3px;
 }
 
 .project h5 {
     text-align: center;
 }
-
 .project img {
+    padding-top:1rem;
+}
+/* end animate about me section */
+/* Style skills section */
+.skills-title {
+    /* background-color: chartreuse; */
+    width: 100%;
+    text-align: center;
+
+}
+.skills-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+.icons-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
 }
+.icons {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.icon {
+    border: 2px solid black;
+    height: 8rem;
+    min-width: 15rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(100, 148, 237, 0.156);
+    
+}
 
-/* end animate about me section */
+.icon i {
+    margin-top: 3rem;
+}
+/* End skills section */
 /* end main container  */
 /* Media query for mobile devices  */
 @media screen and (max-width: 768px) {
@@ -496,9 +541,21 @@ hr {
     .small-intro-text p {
         width: 100%;
     }
+
+    /* Projects section */
+    .project {
+        width:70% ;
+    }
+
+    /* Styling skills section  */
+    .skills-container{
+        background-color: red;
+        width: 100%;
+        height: 20rem;
+    /* end skills section */
     /* end main container  */
 }
-
+}
 /* End of header */
 @media screen and (max-width: 576px) {
     body {
@@ -536,10 +593,17 @@ hr {
     .small-intro-text p {
         font-size: 1rem;
     }
-
+    .projects-container {
+        width: 100%;
+    }
     .project {
-        max-width: 100%;
-        
+        width: 100%;
+        background-color: red;
+        text-align: center;
+    }
+    .project img {
+        width: auto;
+        margin-top: 2rem;
     }
     /* end main container */
     
