@@ -12,60 +12,7 @@ body {
     line-height: 1.3;
     
 }
-/* Aminate full name */
-h2{
-    color: #ccd6f6;
-}
-.full-name {
-    /* width: 58%; */
-    /* background-color: chartreuse; */
-    width: 30vw;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-}
-.full-name span {
-    color: #64ffda ;
-}
-
-h1 {
-    position: relative;
-    color: #0a192f;
-    font-size: 3vw;
-    text-transform: uppercase;
-    -webkit-text-stroke: 0.1vw gray;
-    margin: 0;
-    padding: 0;
-    
-}
-h1::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 46%;
-    width: 200%;
-    height: 100%;
-    color: #64ffda;
-    -webkit-text-stroke: 0vw gray;
-    border-right: 2px solid yellow ;
-    overflow: hidden;
-    animation: animate 3s linear infinite;
-}
-@keyframes animate
-{
-    0% ,10%, 100%
-    {
-        width: 0;
-    }
-    70%
-    {
-        width: 50%;
-    }
-}
-
-/* end full name animation */
-
-
-
+/* Styling header */
 p{
     color:#8892b0 ;
 }
@@ -120,6 +67,7 @@ header {
     display: flex;
     align-items: center;
     margin-bottom: 10rem;
+    z-index: 1;
 }
 .navbar {
     position: fixed;
@@ -239,8 +187,180 @@ nav {
     margin-top: 5rem;
     padding: 2rem;
 }
+/* end of header */
+/* Aminate full name */
+h2{
+    color: #ccd6f6;
+}
+.full-name {
+    /* width: 58%; */
+    background-color: chartreuse;
+    width: 30vw;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.full-name span {
+    color: #64ffda ;
+}
 
-/* Media query for mobile devices */
+h1 {
+    position: relative;
+    color: #0a192f;
+    font-size: 3vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.1vw gray;
+    margin: 0;
+    padding: 0;
+    
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 46%;
+    width: 200%;
+    height: 100%;
+    color: #64ffda;
+    -webkit-text-stroke: 0vw gray;
+    border-right: 2px solid yellow ;
+    overflow: hidden;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate
+{
+    0% ,10%, 100%
+    {
+        width: 0;
+    }
+    70%
+    {
+        width: 50%;
+    }
+}
+/* end full name animation */
+.small-intro {
+    margin-bottom: 10rem;
+}
+.small-intro-text p {
+    width: 50%;
+}
+/* Styling main container  */
+/* ABOUT ME */
+.about-me-title, .projects-title {
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: underline;
+    /* text-align: center; */
+}
+.about-me-article {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+.about-me-text {
+    width: 50%;
+    
+}
+
+.about-me-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    /* height: 100%; */
+    background-color: yellow;
+}
+.about-me-image img {
+    height: 75%;
+    width: 100%;
+}
+/* animate about me section */
+.animate-text {
+    /* background-color: #eee; */
+    opacity: 0;
+    transform: translateX(-50rem);
+    animation: slide_text 2s ease-in-out forwards ;
+}
+
+.delay-text {
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+/* Animate about me text keyframe */
+@keyframes slide_text {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animate about me image */
+.animate-image {
+    /* opacity: 0; */
+    transform: scale(0);
+    transform: translateX(50rem);
+    animation: animate_image 2s ease-in-out forwards;
+}
+
+@keyframes animate_image {
+    50% {
+        transform: scale(1.2);
+    }
+    100%{
+        transform: translateX(0);
+        transform: scale(1);
+    }
+}
+
+/* Projects section */
+
+hr {
+    margin: 5rem 0;
+}
+
+.main-projects-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+}
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+
+}
+.project {
+    max-width: 25rem;
+    /* background-color: red; */
+    border: 1px solid white;
+    overflow: hidden;
+    margin: 1rem;
+    box-shadow: 5px 5px 10px lightblue;
+    border-radius: 3px;
+}
+
+.project h5 {
+    text-align: center;
+}
+
+.project img {
+    padding: 1rem;
+}
+
+/* end animate about me section */
+/* end main container  */
+/* Media query for mobile devices  */
 @media screen and (max-width: 768px) {
     body {
         background-color: greenyellow;
@@ -250,6 +370,8 @@ nav {
         /* width: 58%; */
         background-color: chartreuse;
         width: 32vw;
+        line-height: 1rem;
+        margin-bottom: 1rem;
     }
     h1::before{
         left: 48%;
@@ -339,6 +461,42 @@ nav {
         font-size: medium;
         line-height: 1.5rem;
     }
+    /* Styling main container  */
+
+    /* ABOUT ME */
+    .about-me-title {
+        font-size: 1rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem;
+        /* text-align: center; */
+    }
+    .about-me-article {
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .about-me-text {
+        width: 100%;
+    }
+
+    .about-me-image {
+        width: 100%;
+        /* height: 100%; */
+        background-color: yellow;
+    }
+    .about-me-image img {
+        height: 75%;
+        width: 90%;
+    }
+    .small-intro-text p {
+        width: 100%;
+    }
+    /* end main container  */
 }
 
 /* End of header */
@@ -351,6 +509,7 @@ nav {
         /* width: 58%; */
         background-color: chartreuse;
         width: 35vw;
+        margin-bottom: 1rem;
     }
     h1::before{
         left: 46%;
@@ -370,5 +529,18 @@ nav {
         font-size: medium;
         line-height: 1.5rem;
     }
+    /* Styling main container */
+    .small-intro-text h2 {
+        font-size: 1.2rem;
+    }
+    .small-intro-text p {
+        font-size: 1rem;
+    }
+
+    .project {
+        max-width: 100%;
+        
+    }
+    /* end main container */
     
 }

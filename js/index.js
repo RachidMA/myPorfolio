@@ -61,3 +61,32 @@ cv_button.addEventListener('click', ()=>{
 okButton.addEventListener('click', ()=>{
     boxContainer.style.display = 'none';
 })
+
+//Add animation to about me section when user scroll to it
+const aboutMe = document.querySelector('.about-me-section');
+
+const delay_text = document.querySelector('.delay-text');
+const about_me_paragraph = document.querySelector('.about-me-paragraph');
+const about_me_image = document.querySelector('.about-me-image');
+
+
+window.addEventListener('scroll', ()=>{
+    //Get scroll position 
+    const aboutMeTop = aboutMe.getBoundingClientRect().top;
+    const aboutMeBottom = aboutMe.getBoundingClientRect().bottom;
+
+    if(aboutMeTop<= window.innerHeight && aboutMeBottom >= 0){
+        //Add animation to about me title and paragraph and image
+        delay_text.classList.add('animate-text');
+        about_me_paragraph.classList.add('animate-text');
+        about_me_image.classList.add('animate-image');
+    }else {
+        //Remove animation to about me title and paragraph and image
+        delay_text.classList.remove('animate-text');
+        about_me_paragraph.classList.remove('animate-text');
+        about_me_image.classList.remove('animate-image');
+    }
+    
+})
+
+
