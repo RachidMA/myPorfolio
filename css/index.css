@@ -13,6 +13,9 @@ body {
     
 }
 /* Styling header */
+.logo {
+    
+}
 p{
     color:#8892b0 ;
 }
@@ -403,6 +406,33 @@ hr {
 .icon i {
     margin-top: 3rem;
 }
+.contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+}
+
+/* Style contact links section */
+.contact-links a {
+    text-decoration: none;
+    font-size: small;
+    color: white;
+    transition: font-size .3s ease-in-out;
+}
+.contact-links div {
+    margin: 0 2rem;
+    text-align: center;
+}
+/* .contact-links i:hover {
+    transform: scale(1.2);
+} */
+
+.contact-links a:hover {
+    color: gray;
+    font-size: large;
+}
 /* End skills section */
 /* end main container  */
 /* Media query for mobile devices  */
@@ -556,7 +586,7 @@ hr {
     .skills-container{
         background-color: red;
         width: 100%;
-        height: 20rem;
+        height: auto;
     /* end skills section */
     /* end main container  */
 }
