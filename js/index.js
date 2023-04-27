@@ -88,4 +88,16 @@ window.addEventListener('scroll', ()=>{
     
 })
 
+// Dark and light mode button functionality
+const modeButton = document.querySelector('.mode-button');
+const paragraphSpan = document.querySelector('#span');
+const aboutMeParagraph = document.querySelector('.about-me-paragraph');
+const bodyTag = document.querySelector('#body');
+
+modeButton.addEventListener('click', ()=>{
+    modeButton.classList.toggle('active');
+    paragraphSpan.classList.toggle('light');
+    aboutMeParagraph.classList.toggle('light');
+    bodyTag.classList.toggle('light');
+})
 
