@@ -31,16 +31,18 @@ body {
 .mode {
     margin-top: 5.5rem;
     display: flex;
-    align-items: center;
+    align-items: end;
     flex-direction: column;
-    padding: 0;
 }
 .mode-button-container {
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.576);
     width: 5rem;
     text-align: center;
     border-radius: 1rem;
     margin-bottom: .3rem;
+    margin-right: 2rem;
+    animation: float 5s ease-in-out;
+    
 }
 .mode-button {
     float: left;
@@ -53,12 +55,27 @@ body {
     display: flex;
     flex-direction: row;
 }
+
 .mode-text p {
     margin: 0 .5rem;
     font-size: 1rem;
     letter-spacing: .2rem;
-    color: lightblue;
 }
+/* Changing the dark and light text color based on button position */
+.mode-text .dark{
+    color: green;
+}
+.mode-text .unactive{
+    color: red;
+}
+
+.mode-text .light{
+    color: green;
+}
+.mode-text .unactive{
+    color: red;
+}
+
 .mode-button.active {
     float: right;
 }
@@ -379,12 +396,20 @@ hr {
 .project {
     display: flex;
     flex-direction: column;
-    min-width: 20rem;
+    width: 20rem;
     border: 1px solid white;
     margin: 1rem;
     box-shadow: 3px 3px 10px lightblue;
     border-radius: 3px;
     transition: transform .3s ease-in;
+}
+.project a {
+    text-decoration: none;
+    color: var(--atte-color);
+}
+.project p {
+    font-size: 1rem;
+    text-align: center;
 }
 .project:hover {
     transform: translateY(-1rem);
@@ -395,6 +420,7 @@ hr {
 }
 .project img {
     padding-top:1rem;
+    width: 100%;
 }
 /* end animate about me section */
 /* Style skills section */
@@ -740,6 +766,3 @@ body.light {
     color: white;
 }
 
-p .span.light, p.light{
-    color: black;
-}
