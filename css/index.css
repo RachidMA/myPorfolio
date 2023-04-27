@@ -222,13 +222,20 @@ h2{
 }
 /* end full name animation */
 .small-intro {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 }
 .small-intro-text p {
     width: 50%;
 }
 /* Styling main container  */
 /* ABOUT ME */
+.small-intro p  {
+    line-height: 2rem;
+}
+.small-intro p span {
+    font-size: 2.5rem;
+    
+}
 .about-me-title, .projects-title, .skills-title {
     font-size: 2rem;
     font-weight: 100;
