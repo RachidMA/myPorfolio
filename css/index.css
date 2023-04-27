@@ -1,3 +1,15 @@
+:root{
+    --bg-primary:#0a192f;
+    --bg-secondary:#23549df4;
+    --txt-color:#8892b0;
+    --pd-1rem : 1rem;
+    --pd-2rem:2rem;
+    --color-h2:#ccd6f6;
+    --atte-color:#64ffda;
+
+}
+
+
 body {
     padding: 0;
     margin: 0;
@@ -6,22 +18,20 @@ body {
     min-height: 100%;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     letter-spacing: .2rem;
-    background-color: #0a192f;
-    color: #64ffda;
+    background-color: var(--bg-primary);
+    color: var(--atte-color);
     font-size: 20px;
     line-height: 1.3;
     
 }
+
 /* Styling header */
-.logo {
-    
-}
 p{
-    color:#8892b0 ;
+    color: var(--txt-color);
 }
 
 #box-container {
-    background-color: #23549df4;
+    background-color:var(--bg-secondary);
     width: 20rem;
     height: 15rem;
     display: flex;
@@ -30,12 +40,12 @@ p{
     position: absolute;
     top: 12rem;
     right: 30rem;
-    padding: 2rem;
+    padding: var(--pd-2rem);
     display: none;
 }
 .button {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: var(--pd-1rem);
 }
 .ok-button {
     background-color: rgba(23, 23, 206, 0.826);
@@ -45,15 +55,16 @@ p{
     border: none;
     font-size: medium;
     border-radius: 3px;
+    transition: background-color .2s ease-in;
 }
 .ok-button:hover{
     background-color: #112240;
     transform: scale(1.2);
+    color: white;
 }
 #box-main p {
     color: black;
 }
-/* card backgroud colgroup #112240 */
 
 /* Styling the header */
 /* Reset styles for the header and nav elements */
@@ -77,7 +88,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #0a192f;
+    background-color: var(--bg-primary) ;
     border-bottom: 1px solid #eee;
     transition: transform 0.3s ease-out;
     transform: translateY(0);
@@ -113,13 +124,11 @@ nav {
 
 .nav-links li {
     text-align: center;
-    /* margin: 0 10px; */
     padding: .3rem 1rem ;
-    /* background-color:  #8892b0 ; */
     border-radius: .2rem;
 }
 .nav-links li:hover {
-    background-color: #23549dc3;
+    background-color: var(--bg-secondary);
 }
 
 .nav-links a {
@@ -136,7 +145,7 @@ nav {
     margin-right: .5rem;
 }
 .cv-icon:hover {
-    color: #0a192f;
+    color: var(--bg-primary);
 }
 
 /* Set the styles for the burger menu */
@@ -153,7 +162,7 @@ nav {
 
 /* Styling dropsown menu */
 .dropdown-menu{
-    background-color: #23549dc3;
+    background-color: var(--bg-secondary);
     position: absolute;
     right: .3rem;
     top: 5rem;
@@ -165,8 +174,6 @@ nav {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.80s, visibility 0.75s, height 0.35s ease-in;
-    /* overflow: hidden; */
-
 }
 .dropdown-menu li {
     
@@ -174,7 +181,7 @@ nav {
 }
 
 .dropdown-menu li:hover {
-    background-color:#0a192f;
+    background-color: var(--bg-primary);
 }
 
 .dropdown-menu li a {
@@ -193,42 +200,15 @@ nav {
 /* end of header */
 /* Aminate full name */
 h2{
-    color: #ccd6f6;
+    color: var(--color-h2);
 }
 .full-name {
-    /* width: 58%; */
-    /* background-color: chartreuse; */
     width: 30vw;
     margin-top: 2rem;
     margin-bottom: 5rem;
-}
-.full-name span {
-    color: #64ffda ;
+    width: 25.5rem;
 }
 
-h1 {
-    position: relative;
-    color: #0a192f;
-    font-size: 3vw;
-    text-transform: uppercase;
-    -webkit-text-stroke: 0.1vw gray;
-    margin: 0;
-    padding: 0;
-    
-}
-h1::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 46%;
-    width: 200%;
-    height: 100%;
-    color: #64ffda;
-    -webkit-text-stroke: 0vw gray;
-    border-right: 2px solid #64ffda ;
-    overflow: hidden;
-    animation: animate 4.5s ease-in-out infinite;
-}
 @keyframes animate
 {
     0% ,10%, 100%
@@ -258,7 +238,6 @@ h1::before{
     text-decoration: underline;
 }
 .about-me-article {
-    /* background-color: red; */
     display: flex;
     justify-content: space-around;
     font-size: 1.2rem;
@@ -267,23 +246,33 @@ h1::before{
     width: 50%;
     
 }
+.image {
+    /* background-color: rgba(0, 0, 255, 0.359); */
+    background-color: transparent;
+    width: 40%;
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .2rem solid #8892b0;
+}
 
 .about-me-image {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 22%;
-    /* background-color: yellow; */
-    /* border-radius: 50%; */
+    width: 50%;
+    border-radius: 30%;
+    box-shadow: white 2px 1px 5px;
+    padding: 1rem;
 }
 .about-me-image img {
-    height: 75%;
-    width: 80%;
-    border-radius: 50%;
+    height: auto;
+    width: 100%;
+    border-radius: 30%;
 }
 /* animate about me section */
 .animate-text {
-    /* background-color: #eee; */
     opacity: 0;
     transform: translateX(-50rem);
     animation: slide_text 2s ease-in-out forwards ;
@@ -291,7 +280,7 @@ h1::before{
 
 .delay-text {
     animation-duration: 1.5s;
-    animation-delay: 1.5s;
+    /* animation-delay: 1.5s; */
 }
 /* Animate about me text keyframe */
 @keyframes slide_text {
@@ -347,11 +336,14 @@ hr {
     display: flex;
     flex-direction: column;
     min-width: 20rem;
-    /* background-color: red; */
     border: 1px solid white;
     margin: 1rem;
     box-shadow: 3px 3px 10px lightblue;
     border-radius: 3px;
+    transition: transform .3s ease-in;
+}
+.project:hover {
+    transform: translateY(-1rem);
 }
 
 .project h5 {
@@ -363,7 +355,6 @@ hr {
 /* end animate about me section */
 /* Style skills section */
 .skills-title {
-    /* background-color: chartreuse; */
     width: 100%;
     text-align: center;
 
@@ -394,14 +385,17 @@ hr {
 .icon {
     border: 2px solid black;
     height: 8rem;
-    min-width: 15rem;
+    /* min-width: 15rem; */
+    width: clamp(6rem, 15rem, 18rem);
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
     background-color: rgba(100, 148, 237, 0.156);
+    padding: clamp(.5rem, 1rem, 2rem);
     
 }
+
 
 .icon i {
     margin-top: 3rem;
@@ -433,22 +427,43 @@ hr {
     color: gray;
     font-size: large;
 }
+.full-name h1 {
+    position: relative;
+    color: var(--bg-primary);
+    font-size: 3vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.1vw gray;
+}
+
+.full-name h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 46%;
+    width: 200%;
+    height: 100%;
+    color: var(--atte-color);
+    -webkit-text-stroke: 0vw gray;
+    border-right: 2px solid var(--atte-color) ;
+    overflow: hidden;
+    animation: animate 4.5s ease-in-out infinite;
+}
 /* End skills section */
 /* end main container  */
 /* Media query for mobile devices  */
+
 @media screen and (max-width: 768px) {
-    body {
-        background-color: greenyellow;
-    }
-    /* full name animation */
+    /* Remove animation on full name for small screens */
     .full-name {
-        /* width: 58%; */
-        background-color: chartreuse;
-        width: 32vw;
         line-height: 1rem;
         margin-bottom: 1rem;
     }
-    h1::before{
+    .full-name h1 {
+        color: var(--atte-color);
+    }
+    .full-name h1::before{
+        animation: animate 0s;
+        content: '';
         left: 48%;
     }
     /* end full name animation */
@@ -528,7 +543,6 @@ hr {
 
     /* resize the message box */
     #box-container {
-        background-color: red;
         width: 14rem;
         height: auto;
         top: 12rem;
@@ -548,7 +562,6 @@ hr {
         /* text-align: center; */
     }
     .about-me-article {
-        background-color: red;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -560,16 +573,16 @@ hr {
     }
 
     .about-me-image {
-        width: 100%;
+        width: 50%;
         height: 20rem;
-        background-color: yellow;
+        /* background-color: red; */
 
         /* display: flex;
         align-items: center;
         align-items: center; */
     }
     .about-me-image img {
-        height: 100%;
+        height: 50%;
         width: 100%;
         border-radius: 0;
     }
@@ -584,23 +597,14 @@ hr {
 
     /* Styling skills section  */
     .skills-container{
-        background-color: red;
         width: 100%;
         height: auto;
-    /* end skills section */
-    /* end main container  */
 }
 }
 /* End of header */
 @media screen and (max-width: 576px) {
-    body {
-        background-color: aqua;
-    }
     /* full name animation */
     .full-name {
-        /* width: 58%; */
-        background-color: chartreuse;
-        width: 35vw;
         margin-bottom: 1rem;
     }
     h1::before{
@@ -613,7 +617,7 @@ hr {
 
     /* resize the message box */
     #box-container {
-        background-color: red;
+        /* background-color: red; */
         width: 14rem;
         height: auto;
         top: 12rem;
@@ -628,18 +632,53 @@ hr {
     .small-intro-text p {
         font-size: 1rem;
     }
+    .main-projects-container{
+        width: 100%;
+        display: flex;
+        /* background-color: yellow; */
+        width: auto;
+        flex-wrap: wrap;
+    }
     .projects-container {
         width: 100%;
     }
     .project {
         width: 100%;
-        background-color: red;
+        /* background-color: red; */
         text-align: center;
     }
     .project img {
         width: auto;
         margin-top: 2rem;
     }
-    /* end main container */
+    /* Styling skills section */
+    .icons{
+        width: 80%;
+    }
+    .icon {
+        width: 6rem;
+        padding: 0;
+        padding: 0 .5rem;
+        height: auto;
+        
+    }
     
+    .image {
+        width: 50%;
+        border-radius: 30%;
+        /* background-color: red; */
+        margin-left: 8rem;
+    }
+    
+    .about-me-image {
+        width: 100%;
+        box-shadow: white 2px 1px 5px;
+
+    }
+    .about-me-image img {
+        height: 80%;
+        width: 100%;
+        border-radius: 30%;
+    }
+    /* end main container */
 }
