@@ -298,14 +298,17 @@ h2{
     padding: 1rem;
     text-decoration: underline;
 }
+
 .about-me-article {
     display: flex;
     justify-content: space-around;
     font-size: 1.2rem;
 }
 .about-me-text {
-    width: 50%;
-    
+    width: 50%;  
+}
+.about-me-paragraph {
+    line-height: 2rem;
 }
 .image {
     /* background-color: rgba(0, 0, 255, 0.359); */
@@ -371,6 +374,37 @@ h2{
         transform: scale(1);
     }
 }
+.more-info {
+    margin-left: 2rem;
+}
+
+.more-info-button{
+    background-color: var(--bg-secondary);
+    width: 11rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+.more-info-button:hover {
+    animation: animate_hover  1.5s ease-in-out;
+}
+@keyframes animate_hover {
+    0% {
+        
+        transform: translate(-2px, -3px);
+        box-shadow: 10px 5px .5rem white;
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+.more-info-button i {
+    color: white;
+}
+.more-info-button a {
+    text-decoration: none;
+    color: white;
+}
 
 /* Projects section */
 
@@ -430,20 +464,21 @@ hr {
 
 }
 .skills-container {
+    /* width: 100%; */
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 2rem;
 }
 .icons-container {
-    width: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
 }
 .icons {
-    width: 100%;
+    width: 80%;
     height: auto;
     text-align: center;
     display: flex;
@@ -466,7 +501,10 @@ hr {
     
 }
 
-
+/* icon background color on light mode  */
+.icon.light-mode {
+    background-color: var(--bg-primary);
+}
 .icon i {
     margin-top: 3rem;
 }
@@ -478,6 +516,12 @@ hr {
     justify-content: center;
     margin-top: -1.2rem;
     /* margin-bottom: 2rem; */
+}
+
+/* The line between skills section and contacts section */
+.line {
+    background-color: white;
+    height: 1px;
 }
 
 /* Style contact links section */
@@ -525,6 +569,9 @@ hr {
 /* Media query for mobile devices  */
 
 @media screen and (max-width: 768px) {
+    /* body {
+        background-color: #8892b0;
+    } */
     /* Remove animation on full name for small screens */
     .full-name {
         line-height: 1rem;
@@ -669,12 +716,23 @@ hr {
 
     /* Styling skills section  */
     .skills-container{
-        width: 100%;
+        /* width: 100%; */
         height: auto;
-}
+    }
+    .icons {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .icon {
+        width: 10rem;
+    }
 }
 /* End of header */
 @media screen and (max-width: 576px) {
+    /* body {
+        background-color: yellow;
+    } */
     /* full name animation */
     .full-name {
         margin-bottom: 1rem;
@@ -712,7 +770,7 @@ hr {
         flex-wrap: wrap;
     }
     .projects-container {
-        width: 100%;
+        width: 80%;
     }
     .project {
         width: 100%;
@@ -724,8 +782,11 @@ hr {
         margin-top: 2rem;
     }
     /* Styling skills section */
+    .skills-container {
+        margin-top: -5rem;
+    }
     .icons{
-        width: 80%;
+        width: 100%;
     }
     .icon {
         width: 6rem;
@@ -756,13 +817,38 @@ hr {
 }
 
 /* Dark and light mode button styling */
-.line {
-    background-color: white;
-    height: 1px;
-}
+
 
 body.light {
     background-color: rgb(93, 104, 227);
     color: white;
 }
 
+.job-title {
+    color: black;
+    /* font-size:x-large; */
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
+.line-break {
+    margin-bottom: 5rem;
+}
+
+#span {
+    margin-bottom: 5rem;
+}
+
+p {
+    color: white;
+}
+
+/* css glass blur effect */
+/* From https://css.glass */
+/* .image{
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px; 
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.1px);
+-webkit-backdrop-filter: blur(1.1px);
+border: 1px solid rgba(255, 255, 255, 0.36); 
+}  */
