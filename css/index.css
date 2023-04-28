@@ -197,7 +197,17 @@ nav {
 }
 .cv-icon {
     margin-right: .5rem;
+    animation: rotation 2s infinite linear;
 }
+/* cv icon animation  */
+@keyframes rotation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(359deg);
+    }
+  }
 .cv-icon:hover {
     color: var(--bg-primary);
 }
@@ -296,7 +306,6 @@ h2{
     text-transform: uppercase;
     text-align: center;
     padding: 1rem;
-    text-decoration: underline;
 }
 
 .about-me-article {
@@ -852,3 +861,4 @@ backdrop-filter: blur(1.1px);
 -webkit-backdrop-filter: blur(1.1px);
 border: 1px solid rgba(255, 255, 255, 0.36); 
 }  */
+
