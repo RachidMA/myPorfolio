@@ -18,7 +18,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    width: 100%;
+    min-width: 100%;
     min-height: 100%;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     letter-spacing: .2rem;
@@ -26,6 +26,8 @@ body {
     color: var(--atte-color);
     font-size: 20px;
     line-height: 1.3;
+    color: white;
+    
 }
 /* Styling the light and dark button */
 .mode {
@@ -294,9 +296,9 @@ h2{
     left: 0rem;
     width: 200%;
     height: 100%;
-    color: var(--atte-color);
-    -webkit-text-stroke: 0vw gray;
-    border-right: 2px solid var(--atte-color) ;
+    color: var(--bg-secondary);
+    -webkit-text-stroke: 0vw var(--bg-primary);
+    border-right: 2px solid var(--bg-secondary) ;
     overflow: hidden;
     animation: animate 4.5s ease-in-out infinite;
 }
@@ -750,6 +752,17 @@ hr {
     /* body {
         background-color: yellow;
     } */
+
+    nav {
+        justify-content: space-around;
+    }
+
+    .mode-button-container {
+        width: 3.5rem;
+    }
+    .mode p {
+        font-size: .8rem;
+    }
     /* full name animation */
     .full-name {
         margin-bottom: 1rem;
@@ -830,23 +843,25 @@ hr {
         width: 100%;
         border-radius: 30%;
     }
+
+    /* Styling footer  */
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact i {
+        margin-bottom: 1rem;
+    }
     /* end main container */
 }
 
 /* Dark and light mode button styling */
 
-
 body.light {
-    background-color: rgb(93, 104, 227);
-    color: white;
+    background-color: rgba(128, 128, 128, 0.056);
+    color: black;
 }
 
-.job-title {
-    color: black;
-    /* font-size:x-large; */
-    font-weight: 600;
-    margin-bottom: 5rem;
-}
 .line-break {
     margin-bottom: 5rem;
 }
@@ -855,10 +870,25 @@ body.light {
     margin-bottom: 5rem;
 }
 
-p {
+.icon{
+    background-color: var(--bg-primary);
     color: white;
+
+}
+.small-intro-text h2, h4, .about-me-text h3, .project a{
+    color: #494D5F;
+}
+.project a:hover {
+    color: var(--bg-secondary);
+}
+.project p {
+    color: #D0BDF4;
 }
 
+.project {
+    background-color:var(--bg-primary) ;
+}
+/* ===================== */
 /* css glass blur effect */
 /* From https://css.glass */
 /* .image{

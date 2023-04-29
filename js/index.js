@@ -90,10 +90,7 @@ window.addEventListener('scroll', ()=>{
 
 // Dark and light mode button functionality
 const modeButton = document.querySelector('.mode-button');
-const paragraphSpan = document.querySelector('#span');
-const aboutMeParagraph = document.querySelector('.about-me-paragraph');
 const bodyTag = document.querySelector('#body');
-const iconCards =document.querySelectorAll('.icon');
 
 //Change the color of dark and light text when active and unactive
 const textDark = document.querySelector('.dark');
@@ -101,18 +98,12 @@ const textLight = document.querySelector('.light');
 
 modeButton.addEventListener('click', ()=>{
     modeButton.classList.toggle('active');
-    paragraphSpan.classList.toggle('light');
-    aboutMeParagraph.classList.toggle('light');
     bodyTag.classList.toggle('light');
 
     //Change the text color from red to green and vise versa
     textDark.classList.toggle('unactive');
     textLight.classList.toggle('unactive');
 
-    //skills section
-    iconCards.forEach(iconCard =>{
-        iconCard.classList.toggle('light-mode')
-    })
     
 })
 
