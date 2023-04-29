@@ -266,22 +266,50 @@ nav {
 h2{
     color: var(--color-h2);
 }
-.full-name {
-    width: 30vw;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    width: 25.5rem;
+.animate-name {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    margin-top: -3rem;
+}
+.first {
+    color: var(--bg-primary);
+    -webkit-text-stroke: 0.1vw gray;
+}
+.last{
+    position: relative;
+    margin-left: .8rem;
+    color: var(--bg-primary);
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.1vw gray;
+}
+
+.last::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 200%;
+    height: 100%;
+    color: var(--atte-color);
+    -webkit-text-stroke: 0vw gray;
+    border-right: 2px solid var(--atte-color) ;
+    overflow: hidden;
+    animation: animate 4.5s ease-in-out infinite;
 }
 
 @keyframes animate
 {
-    0% ,10%, 100%
+    0%, 10%, 100%
     {
         width: 0;
     }
     70%
     {
-        width: 50%;
+        width: 100%;
     }
 }
 /* end full name animation */
@@ -552,27 +580,7 @@ hr {
     color: gray;
     font-size: large;
 }
-.full-name h1 {
-    position: relative;
-    color: var(--bg-primary);
-    font-size: 3vw;
-    text-transform: uppercase;
-    -webkit-text-stroke: 0.1vw gray;
-}
 
-.full-name h1::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 46%;
-    width: 200%;
-    height: 100%;
-    color: var(--atte-color);
-    -webkit-text-stroke: 0vw gray;
-    border-right: 2px solid var(--atte-color) ;
-    overflow: hidden;
-    animation: animate 4.5s ease-in-out infinite;
-}
 /* End skills section */
 /* end main container  */
 /* Media query for mobile devices  */
