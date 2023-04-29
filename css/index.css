@@ -15,6 +15,7 @@ html {
 }
 
 body {
+    position: relative;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -86,7 +87,7 @@ p{
     color: var(--txt-color);
 }
 
-#box-container {
+/* #box-container {
     background-color:var(--bg-secondary);
     width: 20rem;
     height: 15rem;
@@ -96,6 +97,22 @@ p{
     position: absolute;
     top: 12rem;
     right: 30rem;
+    padding: var(--pd-2rem);
+    display: none;
+} */
+#box-container {
+    position: absolute;
+    top: 12rem;
+    right: 30rem;
+    left: 32vw;
+    background-color:var(--bg-secondary);
+    font-size: clamp(.8rem, .8rem, 1.3rem);
+    line-height: 1.2rem;
+    min-width: 25vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: var(--pd-2rem);
     display: none;
 }
@@ -143,7 +160,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: var(--bg-primary) ;
     border-bottom: 1px solid #eee;
     transition: transform 0.3s ease-out;
@@ -679,15 +696,6 @@ hr {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    /* resize the message box */
-    #box-container {
-        width: 14rem;
-        height: auto;
-        top: 12rem;
-        right: 15rem;
-        font-size: medium;
-        line-height: 1.5rem;
-    }
     /* Styling main container  */
 
     /* ABOUT ME */
@@ -749,9 +757,9 @@ hr {
 }
 /* End of header */
 @media screen and (max-width: 576px) {
-    /* body {
-        background-color: yellow;
-    } */
+    body {
+        max-width: 100vw;
+    }
 
     nav {
         justify-content: space-around;
@@ -775,22 +783,18 @@ hr {
         width: 100%;
     }
 
-    /* resize the message box */
-    #box-container {
-        /* background-color: red; */
-        width: 14rem;
-        height: auto;
-        top: 12rem;
-        right: 8rem;
-        font-size: medium;
-        line-height: 1.5rem;
-    }
     /* Styling main container */
     .small-intro-text h2 {
         font-size: 1.2rem;
     }
     .small-intro-text p {
         font-size: 1rem;
+    }
+    #box-container {
+        font-size: .8rem;
+        padding:0.2rem 1rem;
+        font-size: x-small;
+        font-weight: 600;
     }
     .main-projects-container{
         width: 100%;

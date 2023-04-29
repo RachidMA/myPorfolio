@@ -29,12 +29,24 @@ prevScrollpos = currentScrollPos;
 const burgerButton = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links')
 const dropMenu = document.querySelector('.dropdown-menu')
+
+
 burgerButton.addEventListener('click', ()=>{
    //Show drop down menu
     dropMenu.classList.toggle('show');
 
-    // Rote the lines for the burger menu
+    // Rotate the lines for the burger menu
     burgerButton.classList.toggle('close');
+})
+
+//Close the dropmenu when one of the dropdown menu links if clicked
+const dropdown_links = document.querySelectorAll('.dropdown-link');
+
+dropdown_links.forEach(dropdown_link =>{
+    dropdown_link.addEventListener('click', ()=>{
+        dropMenu.classList.toggle('show');
+        burgerButton.classList.toggle('close')
+    })
 })
 
 
