@@ -34,16 +34,17 @@ body {
 .mode {
     margin-top: 5.5rem;
     display: flex;
-    align-items: end;
+    align-items: center;
     flex-direction: column;
+    /* text-align: center; */
 }
 .mode-button-container {
     background-color: rgba(128, 128, 128, 0.576);
     width: 5rem;
-    text-align: center;
+    text-align: end;
     border-radius: 1rem;
     margin-bottom: .3rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
     animation: float 5s ease-in-out;
     
 }
@@ -51,7 +52,7 @@ body {
     float: left;
 }
 .mode-button i {
-    padding: .4rem;
+    padding: .5rem;
     color: black;
 }
 .mode-text {
@@ -61,7 +62,7 @@ body {
 
 .mode-text p {
     margin: 0 .5rem;
-    font-size: 1rem;
+    font-size: .8rem;
     letter-spacing: .2rem;
 }
 /* Changing the dark and light text color based on button position */
@@ -369,7 +370,7 @@ h2{
 .image {
     /* background-color: rgba(0, 0, 255, 0.359); */
     background-color: transparent;
-    width: 40%;
+    width: 30%;
     border-radius: 30%;
     display: flex;
     align-items: center;
@@ -381,7 +382,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    /* width: 100%; */
     border-radius: 30%;
     box-shadow: white 2px 1px 5px;
     padding: 1rem;
@@ -772,15 +773,21 @@ hr {
         font-size: .8rem;
     }
     /* full name animation */
-    .full-name {
+    /* .full-name {
         margin-bottom: 1rem;
-    }
-    h1::before{
+        font-size: 2rem;
+    } */
+    /* h1::before{
         left: 46%;
+    } */
+
+    .animate-name {
+        font-size: 1rem;
     }
     /* end full name animation */
     .dropdown-menu {
         width: 100%;
+        padding-top: 2rem;
     }
 
     /* Styling main container */
@@ -790,11 +797,19 @@ hr {
     .small-intro-text p {
         font-size: 1rem;
     }
+    
     #box-container {
+        width: 10rem;
         font-size: .8rem;
         padding:0.2rem 1rem;
         font-size: x-small;
         font-weight: 600;
+        margin-left: -1.5rem;
+    }
+    .ok-button {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: small;
     }
     .main-projects-container{
         width: 100%;
@@ -831,19 +846,16 @@ hr {
     }
     
     .image {
-        width: 50%;
-        border-radius: 30%;
-        /* background-color: red; */
-        margin-left: 8rem;
+        width: 100%;
+        border-radius: 30%; 
     }
     
     .about-me-image {
         width: 100%;
         box-shadow: white 2px 1px 5px;
-
     }
     .about-me-image img {
-        height: 80%;
+        height: 100%;
         width: 100%;
         border-radius: 30%;
     }
