@@ -883,6 +883,11 @@ hr {
     .contact i {
         margin-bottom: 1rem;
     }
+
+    .icon.hover::before{
+        font-size: 5px;
+        letter-spacing: 1px;
+    } 
     /* end main container */
 }
 
@@ -944,12 +949,14 @@ border: 1px solid rgba(255, 255, 255, 0.36);
     left: 0;
     width: 0;
     height: 100%;
+    font-size: .8rem;
+    font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 4px 20px whitesmoke;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 0px 5px whitesmoke;
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     overflow: hidden;
     opacity: 1;
