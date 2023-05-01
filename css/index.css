@@ -1,8 +1,9 @@
+
 :root{
     --bg-primary:#0a192f;
     --bg-secondary:#23549df4;
     --txt-color:#8892b0;
-    --pd-1rem : 1rem;
+    --pd-1rem : 1rem; 
     --pd-2rem:2rem;
     --color-h2:#ccd6f6;
     --atte-color:#64ffda;
@@ -28,13 +29,12 @@ body {
     font-size: 20px;
     line-height: 1.3;
     color: white;
-    
 }
 /* Styling the light and dark button */
 .mode {
-    margin-top: 5.5rem;
+    margin-top: 7.5rem;
     display: flex;
-    align-items: center;
+    align-items: end;
     flex-direction: column;
     /* text-align: center; */
 }
@@ -150,12 +150,13 @@ header, nav {
 /* Set the styles for the header element */
 header {
     /* background-color: #333; */
-    color: #fff;
+    color: white;
     height: 80px;
     display: flex;
     align-items: center;
     margin-bottom: 10rem;
     z-index: 1;
+    padding: .8rem 0;
 }
 .navbar {
     position: fixed;
@@ -206,7 +207,7 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
+    color: whitesmoke;
     text-decoration: none;
     font-size: 18px;
 }
@@ -249,7 +250,7 @@ nav {
     background-color: var(--bg-secondary);
     position: absolute;
     right: .3rem;
-    top: 5rem;
+    top: 6.5rem;
     text-align: center;
     list-style: none;
     width: 80%;
@@ -270,7 +271,7 @@ nav {
 
 .dropdown-menu li a {
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
 }
 
 .dropdown-menu li a:hover {
@@ -367,9 +368,9 @@ h2{
 .about-me-paragraph {
     line-height: 2rem;
 }
-.image {
-    /* background-color: rgba(0, 0, 255, 0.359); */
-    background-color: transparent;
+.image-section {
+    
+    /* background-color: white; */
     width: 30%;
     border-radius: 30%;
     display: flex;
@@ -488,31 +489,45 @@ hr {
     display: flex;
     flex-direction: column;
     width: 20rem;
+    height: 25rem;
     border: 1px solid white;
     margin: 1rem;
     box-shadow: 3px 3px 10px lightblue;
     border-radius: 3px;
-    transition: transform .3s ease-in;
+    transition: scale .3s ease-in;
 }
 .project a {
     text-decoration: none;
     color: var(--atte-color);
+    /* background-color: red; */
 }
 .project p {
-    font-size: 1rem;
+    font-size: .8rem;
     text-align: center;
+    /* background-color: yellow; */
 }
 .project:hover {
-    transform: translateY(-1rem);
+    /* transform: translateY(-1rem); */
+    scale: 1.1;
 }
 
 .project h5 {
     text-align: center;
+    font-weight: 400;
 }
 .project img {
     padding-top:1rem;
     width: 100%;
+    height: 90%;
+    /* background-color: pink; */
 }
+.project-info {
+    /* background-color: #64ffda; */
+    min-height: 10rem;
+    padding: .5rem;
+    
+}
+
 /* end animate about me section */
 /* Style skills section */
 .skills-title {
@@ -545,7 +560,7 @@ hr {
     gap: .5rem;
 }
 .icon {
-    border: 2px solid black;
+    border: 1px solid whitesmoke;
     height: 8rem;
     /* min-width: 15rem; */
     width: clamp(6rem, 15rem, 18rem);
@@ -600,12 +615,14 @@ hr {
     color: gray;
     font-size: large;
 }
-
+.contact-links i {
+    color: white;
+}
 /* End skills section */
 /* end main container  */
 /* Media query for mobile devices  */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     /* body {
         background-color: #8892b0;
     } */
@@ -718,20 +735,21 @@ hr {
     .about-me-text {
         width: 100%;
     }
-
+    .about-me-article{
+        justify-content: center;
+    }
+    .image-section{
+        width: 95%;
+        border: none;
+    }
     .about-me-image {
-        width: 50%;
+        width: 100%;
         height: 20rem;
-        /* background-color: red; */
-
-        /* display: flex;
-        align-items: center;
-        align-items: center; */
     }
     .about-me-image img {
-        height: 50%;
+        height: 100%;
         width: 100%;
-        border-radius: 0;
+        /* margin-right: 3rem; */
     }
     .small-intro-text p {
         width: 100%;
@@ -755,10 +773,13 @@ hr {
     .icon {
         width: 10rem;
     }
+
+    
 }
 /* End of header */
 @media screen and (max-width: 576px) {
     body {
+        /* background-color: blue; */
         max-width: 100vw;
     }
 
@@ -772,14 +793,7 @@ hr {
     .mode p {
         font-size: .8rem;
     }
-    /* full name animation */
-    /* .full-name {
-        margin-bottom: 1rem;
-        font-size: 2rem;
-    } */
-    /* h1::before{
-        left: 46%;
-    } */
+    
 
     .animate-name {
         font-size: 1rem;
@@ -814,7 +828,6 @@ hr {
     .main-projects-container{
         width: 100%;
         display: flex;
-        /* background-color: yellow; */
         width: auto;
         flex-wrap: wrap;
     }
@@ -823,7 +836,6 @@ hr {
     }
     .project {
         width: 100%;
-        /* background-color: red; */
         text-align: center;
     }
     .project img {
@@ -844,12 +856,13 @@ hr {
         height: auto;
         
     }
-    
-    .image {
-        width: 100%;
+    .image-section {
+        
         border-radius: 30%; 
+        width: 100%;
+        padding-right: 2rem;
+        margin-left: -1rem;
     }
-    
     .about-me-image {
         width: 100%;
         box-shadow: white 2px 1px 5px;
@@ -857,7 +870,7 @@ hr {
     .about-me-image img {
         height: 100%;
         width: 100%;
-        border-radius: 30%;
+        padding: 1rem;
     }
 
     /* Styling footer  */

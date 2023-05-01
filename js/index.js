@@ -115,7 +115,21 @@ modeButton.addEventListener('click', ()=>{
     //Change the text color from red to green and vise versa
     textDark.classList.toggle('unactive');
     textLight.classList.toggle('unactive');
-
-    
 })
 
+//Animate skill icon on hover
+
+const icon_containers = document.querySelectorAll('.icon')
+
+icon_containers.forEach(skill_container =>{
+    const skill_icon = skill_container.querySelector('#skill-icon')
+    //on mouse enter
+    skill_container.addEventListener('mouseenter', ()=>{
+        skill_icon.classList.add('fa-beat')
+    })
+    //on mouse leave
+    skill_container.addEventListener('mouseleave', ()=>{
+        skill_icon.classList.remove('fa-beat')
+    })
+
+})
