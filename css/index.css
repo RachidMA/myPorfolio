@@ -614,7 +614,7 @@ hr {
 
 @media screen and (max-width: 800px) {
     /* body {
-        background-color: #8892b0;
+        background-color: red;
     } */
     /* Remove animation on full name for small screens */
     .full-name {
@@ -748,8 +748,12 @@ hr {
     /* Projects section */
     .project {
         width:70% ;
+        height: 50%;
+        overflow: hidden;
     }
-
+    .project img {
+        height: 15rem;
+    }
     /* Styling skills section  */
     .skills-container{
         /* width: 100%; */
