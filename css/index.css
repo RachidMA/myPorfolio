@@ -768,10 +768,9 @@ hr {
 }
 /* End of header */
 @media screen and (max-width: 576px) {
-    body {
+    /* body {
         background-color: blue;
-        /* max-width: 100vw; */
-    }
+    } */
 
     nav {
         justify-content: space-between;
