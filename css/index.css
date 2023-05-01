@@ -1,4 +1,3 @@
-
 :root{
     --bg-primary:#0a192f;
     --bg-secondary:#23549df4;
@@ -7,7 +6,6 @@
     --pd-2rem:2rem;
     --color-h2:#ccd6f6;
     --atte-color:#64ffda;
-
 }
 
 /* Scrolling behanior */
@@ -30,6 +28,13 @@ body {
     line-height: 1.3;
     color: white;
 }
+
+/* The line between skills section and contacts section */
+.line {
+    background-color: rgba(245, 245, 245, 0.295);
+    height: .2px;
+}
+
 /* Styling the light and dark button */
 .mode {
     margin-top: 7.5rem;
@@ -88,19 +93,7 @@ p{
     color: var(--txt-color);
 }
 
-/* #box-container {
-    background-color:var(--bg-secondary);
-    width: 20rem;
-    height: 15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 12rem;
-    right: 30rem;
-    padding: var(--pd-2rem);
-    display: none;
-} */
+
 #box-container {
     position: absolute;
     top: 12rem;
@@ -176,7 +169,8 @@ header {
 nav {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    padding: 0 2rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -249,8 +243,8 @@ nav {
 .dropdown-menu{
     background-color: var(--bg-secondary);
     position: absolute;
-    right: .3rem;
-    top: 6.5rem;
+    right: 0;
+    top: 6.7rem;
     text-align: center;
     list-style: none;
     width: 80%;
@@ -592,12 +586,6 @@ hr {
     /* margin-bottom: 2rem; */
 }
 
-/* The line between skills section and contacts section */
-.line {
-    background-color: white;
-    height: 1px;
-}
-
 /* Style contact links section */
 .contact-links a {
     text-decoration: none;
@@ -781,12 +769,12 @@ hr {
 /* End of header */
 @media screen and (max-width: 576px) {
     body {
-        /* background-color: blue; */
-        max-width: 100vw;
+        background-color: blue;
+        /* max-width: 100vw; */
     }
 
     nav {
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .mode-button-container {
