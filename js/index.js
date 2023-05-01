@@ -133,3 +133,16 @@ icon_containers.forEach(skill_container =>{
     })
 
 })
+
+/* ANIMATING ICON CARDS FOR SKILLS SECTION */
+const icons = document.querySelectorAll('.icon')
+
+icons.forEach(icon =>{
+    icon.addEventListener('mouseenter', ()=>{
+        icon.classList.add('hover')
+    })
+
+    icon.addEventListener('mouseleave', ()=>{
+        icon.classList.remove('hover')
+    })
+})
