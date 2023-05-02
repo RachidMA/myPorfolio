@@ -775,7 +775,14 @@ hr {
     /* body {
         background-color: blue;
     } */
+    .about-me-text p{
+        font-size: 1rem;
+        word-wrap: break-word;
+        /* background-color: yellow; */
+        width: 80vw;
+        padding-right: 2rem;
 
+    }
     nav {
         justify-content: space-between;
     }
@@ -845,7 +852,7 @@ hr {
     .icon {
         width: 6rem;
         padding: 0;
-        padding: 0 .5rem;
+        padding: 0 .8rem;
         height: auto;
         
     }
