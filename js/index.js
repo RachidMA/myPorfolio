@@ -21,8 +21,8 @@ else if (prevScrollpos < currentScrollPos && !navbar.classList.contains('hidden'
     navbar.classList.add('hidden');
 }
 
-// Set the previous scroll position to the current scroll position
-prevScrollpos = currentScrollPos;
+    // Set the previous scroll position to the current scroll position
+    prevScrollpos = currentScrollPos;
 });
 
 //Show navbar when burger clicked
@@ -103,6 +103,7 @@ window.addEventListener('scroll', ()=>{
 // Dark and light mode button functionality
 const modeButton = document.querySelector('.mode-button');
 const bodyTag = document.querySelector('#body');
+const aboutMeParagraph = document.querySelector('.about-me-paragraph')
 
 //Change the color of dark and light text when active and unactive
 const textDark = document.querySelector('.dark');
@@ -111,6 +112,8 @@ const textLight = document.querySelector('.light');
 modeButton.addEventListener('click', ()=>{
     modeButton.classList.toggle('active');
     bodyTag.classList.toggle('light');
+    aboutMeParagraph.classList.toggle('dark-mode')
+    
 
     //Change the text color from red to green and vise versa
     textDark.classList.toggle('unactive');
