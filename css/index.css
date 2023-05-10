@@ -294,14 +294,19 @@ h2{
 }
 .first {
     color: var(--bg-primary);
-    -webkit-text-stroke: 0.1vw gray;
+    -webkit-text-stroke: 0vw gray;
+    background: linear-gradient(90deg,  var(--bg-primary), var(--bg-secondary));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 .last{
     position: relative;
     margin-left: .8rem;
     color: var(--bg-primary);
     text-transform: uppercase;
-    -webkit-text-stroke: 0.1vw gray;
+    /* -webkit-text-stroke: 0.09vw rgba(128, 128, 128, 0.233);
+    background-color: transparent; */
 }
 
 .last::before{
@@ -311,11 +316,15 @@ h2{
     left: 0rem;
     width: 200%;
     height: 100%;
-    color: var(--bg-secondary);
+    /* color: var(--bg-secondary); */
     -webkit-text-stroke: 0vw var(--bg-primary);
     border-right: 2px solid var(--bg-secondary) ;
     overflow: hidden;
     animation: animate 4.5s ease-in-out infinite;
+    background: linear-gradient(90deg, #a0042b, #3e1da2 ) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
 @keyframes animate
