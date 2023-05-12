@@ -69,11 +69,11 @@ GO TO THIS [LINK](https://elegant-semolina-c82ca3.netlify.app)
 
 ## Conclusion.
 
+Creating my own portfolio was an exciting experience that helped me enhance my web development skills. I had the chance to explore new techniques and technologies like animations and dark mode. Throughout the project, I learned the importance of continuous learning and embracing new challenges. As a beginner in web development, I'm enthusiastic about my future growth in this ever-changing field, and to expand my technical expertise and discover creative ways to build intersting web experiences.
+
 ## Contact Information
 
 ## 🔗 Links
 
 [![profile](https://img.shields.io/badge/my_profile-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/RachidMA/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rachid-azzahir-b1284a25a/)
-
-Creating my own portfolio was an exciting experience that helped me enhance my web development skills. I had the chance to explore new techniques and technologies like animations and dark mode. Throughout the project, I learned the importance of continuous learning and embracing new challenges. As a beginner in web development, I'm enthusiastic about my future growth in this ever-changing field, and to expand my technical expertise and discover creative ways to build intersting web experiences.
