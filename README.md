@@ -1,7 +1,7 @@
-# myPorfolio
+# myPortfolio
 
-This project will dedicated to setup my own personal porfolio containing my personal
-informations and my old and new skills.
+This project will be dedicated to set up my own personal portfolio containing my personal
+information and my old and new skills.
 
 # Project Title
 
