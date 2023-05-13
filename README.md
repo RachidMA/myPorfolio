@@ -15,11 +15,9 @@ A brief, one-liner description of the project.
 2. [Features](#features)
 3. [Technologies](#technologies)
 4. [Installation and Setup](#installation-and-setup)
-5. [API Documentation](#api-documentation)
-6. [Testing](#testing)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact Information](#contact-information)
+5. [Screenshots](#Screenshots)
+6. [Conclusion](#Conclusion)
+7. [Contact Information](#contact-information)
 
 ## Introduction
 
