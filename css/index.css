@@ -408,8 +408,8 @@ h2{
 }
 .about-me-image img {
     height: auto;
-    width: 15rem;
-    height: 22rem;
+    width: 21rem;
+    height: 28rem;
     border-radius: 30%;
 }
 /* animate about me section */
@@ -921,19 +921,19 @@ hr {
         padding-right: 2rem;
         margin-left: -1rem;
     }
-    /* .about-me-image {
-        width: 100%;
+    .about-me-image {
+        width: 90%;
         box-shadow: white 2px 1px 5px;
-    } */
-    /* .about-me-image img {
-        height: 100%;
-        width: 100%;
-        padding: 1rem;
+    } 
+    .about-me-image img {
+        height: 90%;
+        width: 15rem;
+        /* padding: .5rem; */
         border-radius: 30%;
-        box-shadow: white 2px 1px 5px;
+        /* box-shadow: white 2px 1px 5px; */
         padding: 1rem;
         
-    } */
+    }
 
     /* Styling footer  */
     .contact {
