@@ -26,17 +26,17 @@
     <header class="navbar">
         <nav>
             <div class="logo">
-                <a href="#"><img src="/images/letter-r.png" alt="Logo"></a>
+                <a href="#"><img src="/images/letter-r.png" alt="Logo" id="logo"></a>
             </div>
             <div class="nav-container">
                 <ul class="nav-links">
-                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#about-me">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#contacts">Contact</a></li>
                     <!-- <li class="cv-button"><span><i class="fa-solid fa fas-beat fa-download cv-icon"></i></span><a href="#">Download CV</a></li> -->
                     <!-- <i class="fa-solid fa-download fa-flip"></i> -->
-                    <li class="cv-button"><span><i class="fa-solid fa-download  cv-icon i-cv-icon"></i></span><a href="#">Download CV</a></li>
+                    <li class="cv-button"><span><i class="fa-solid fa-download  cv-icon i-cv-icon"></i></span><a href="https://drive.google.com/file/d/1AuISk2SB98qC_LzY2y4w_7hypfGf8j9z/view?usp=drive_link" target="_blank">CV</a></li>
                 </ul>
             </div>
             <div class="burger">
@@ -47,15 +47,14 @@
         </nav>
         <!-- it will show when burger button clicked -->
         <div class="dropdown-menu">
-            <li><a href="#about-me" class="dropdown-link">About</a></li>
+            <li><a href="#about-me" class="dropdown-link">About Me</a></li>
             <li><a href="#projects" class="dropdown-link">Projects</a></li>
             <li><a href="#skills" class="dropdown-link">Skills</a></li>
-            <li><a href="#contacts" class="dropdown-link">Contacts</a></li>
-            <li id="cv-button" class="dropdown-link"><span><i class="fa-solid fa-download fa-flip cv-icon"></i></span><a href="#">Download CV</a></li>
-            <!-- <li id="cv-button"><span><i class="fa-solid fa fas-beat fa-download cv-icon"></i></span><a href="#">Download CV</a></li> -->
+            <li><a href="#contacts" class="dropdown-link">Contact</a></li>
+            <li id="cv-button" class="dropdown-link"><span><i class="fa-solid fa-download fa-flip cv-icon"></i></span><a href="https://drive.google.com/file/d/1d2kpbUBnYiv2Us1RfXpc7liBz3r_xtjf/view?usp=drive_link" target="_blank">CV</a></li>
         </div>
     </header>
-    <div class="mode">
+    <!-- <div class="mode">
         <div class="mode-button-container">
             <div class="mode-button">
                 <i class="fa-solid fa-circle-dot fa-lg"></i>
@@ -65,7 +64,16 @@
             <p class="dark">Dark</p>
             <p class="light unactive">Light</p>
         </div>
+    </div> -->
+    <div class="mode">
+        <div class="mode-button-container">
+        <label class="toggle-button">
+            <input type="checkbox" class="checkbox" />
+            <span class="icon"></span>
+        </label>
+        </div>
     </div>
+
     <!-- start main container -->
     <div class="main-container" id="name-section">
         <div class="small-intro">
@@ -78,19 +86,21 @@
             </div>
             <div class="small-intro-text">
                 <div>
-                    <h2>I am web developer.</h3>
-                    <p id="span">Trainee at BeCode school.</p>
+                    <h2>PHP Web developer</h3>
+                    <p id="span">Trainee at BeCode</p>
                 </div>
             </div>
         </div>
+        <p class="line"></p>
         <div class="about-me-section" id="about-me">
             <div class="about-me-title">
                 <h4 class="delay-text ">About Me</h4>
             </div>
             <div class="about-me-article">
                 <div class="about-me-text ">
-                    <h3>Hi, my name is Rachid Azzahir</h3>
-                    <p class="about-me-paragraph">I am <span id="special_words">passionate about pushing the limits</span> of my coding abilities to solve problems and create solutions. committing the time, effort <span id="special_words">to grow my skills</span>  and knowledge through studies at Becode school. My <span id="special_words">ultimate goal</span>  as a web developer is to create digital experiences that are not only visually stunning, user-friendly, but also provide <span id="special_words">satisfying results.</span>  I am excited to continue my journey in this ever-evolving field and look <span id="special_words">forward to the new challenges and opportunities.</span> </p>
+                    <h3>Hello, I am Rachid.</h3>
+                    <!-- <p>Welcome to my Portfolio.</p> -->
+                    <p class="about-me-paragraph">I am <span id="special_words"> passionate about pushing the limits</span> of my coding abilities to analyse problems and create solutions. I started as self-learner, received professional training at BeCode and I am still determined to further<span id="special_words"> improve my skills</span>  and expand my knowledge. My <span id="special_words">ultimate goal</span> is to create digital experiences that are not only visually stunning and user-friendly, but also deliver <span id="special_words">satisfying results.</span>  I am excited to continue my journey in this ever-evolving field and to embrace<span id="special_words"> new challenges and opportunities.</span> </p>
                 </div>
                 <div class="image-section">
                     <div class="image">
@@ -156,7 +166,7 @@
             <div class="project">
                 <div class="project-info">
                     <h5><a href="https://beamish-khapse-27a278.netlify.app" target="_blank">Favorite Books</a></h5>
-                    <p>Save your favorite books using javascript, html and css</p>
+                    <p>Save your favorite books</p>
                 </div>
                 <img src="images/dynamic-books-list.png" alt="">
             </div>
@@ -164,7 +174,7 @@
             <!-- LARAVEL PROJECT(SERVER SIDE) -->
             <div class="project">
                 <div class="project-info">
-                    <h5><a href="https://magnificent-caramel-f24349.netlify.app" target="_blank">Find Handyman From Your Phone</a></h5>
+                    <h5><a href="https://github.com/RachidMA/laravel_personal_project" target="_blank">Find Handyman From Your Phone</a></h5>
                     <p>Find the right handyman and save yourself time and energy.</p>
                 </div>
                 <img src="images/handy-man.png" alt="">
@@ -246,3 +256,4 @@
     <!-- end message box -->
 </body>
 </html>
+
