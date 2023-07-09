@@ -647,7 +647,61 @@ hr {
 /* End skills section */
 /* end main container  */
 /* Media query for mobile devices  */
+/* STYLING END TRAINING PROJECT 10DOTS */
+.final-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.project-container  {
+    border: 1px solid rgba(245, 245, 245, 0.397);
+    box-shadow: 3px 3px 10px lightblue;
+}
+.project-container .project-info  {
+    background-color: var(--bg-primary);
+}
+.project-container .project-info .title {
+    text-align: center;
+}
+
+.project-container .project-info .text {
+    text-align: start;
+    line-height: 2rem;
+    padding: .5rem;
+}
+.project-container .project-info .links {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.project-container .project-info a {
+   text-decoration: none;
+   padding: .5rem 1.5rem;
+   background-color: var(--bg-secondary);
+   color: whitesmoke;
+}
+.project-container .project-info .dots-link {
+    margin-right: 1rem;
+ }
+
+.project-container .project-info a:hover {
+    text-decoration: none;
+    border: 1px solid whitesmoke;
+    background-color: var(--bg-primary);
+ }
+.final-project .project-container{
+    width: 45%;
+}
+.final-project .project-image {
+    height: 20rem;
+    padding: 1rem;
+    background-color: whitesmoke;
+}
+
+.final-project .project-image img {
+    height: 100%;
+    width: 100%;
+}
 @media screen and (max-width: 800px) {
     /* Remove animation on full name for small screens */
     .full-name {
@@ -819,6 +873,12 @@ hr {
         width: 10rem;
     }
 
+    /* STYLING FINAL PROJECT */
+    .final-project .project-container{
+        width: 90%;
+        font-size: 1rem;
+    }
+
     
 }
 /* End of header */
@@ -973,6 +1033,12 @@ hr {
         letter-spacing: 1px;
     } 
     /* end main container */
+     /* STYLING FINAL PROJECT */
+
+     .final-project .project-container .project-image{
+        display: none;
+    }
+    
 }
 
 /* Dark and light mode button styling */
